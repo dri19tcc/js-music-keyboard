@@ -15,7 +15,7 @@ $(document).ready( function() {
 
   $('.note.c').click(function(){ // instead of .cl.ick can also use .mousedown.  Use .mouseover for "strumming"
     if (!hover) {
-      c.currentTime = 0;
+      c.currentTime = 0; // instead of currentTime you can use .load()
       c.play();
     }
   })
@@ -119,49 +119,67 @@ $(document).ready( function() {
       c.play();
       setTimeout(function() {
         $('.note.c').removeClass("active")
-      }, 200)
+      }, 300)
     } else if (event.which === 115) {
       $('.note.d').addClass("active")
       d.currentTime = 0;
       d.play();
       setTimeout(function() {
         $('.note.d').removeClass("active")
-      }, 200)
+      }, 300)
     } else if (event.which === 100) {
       $('.note.e').addClass("active")
       e.currentTime = 0;
       e.play();
       setTimeout(function() {
         $('.note.e').removeClass("active")
-      }, 200)
+      }, 300)
     } else if (event.which === 102) {
       $('.note.f').addClass("active")
       f.currentTime = 0;
       f.play();
       setTimeout(function() {
         $('.note.f').removeClass("active")
-      }, 200)
+      }, 300)
     } else if (event.which === 103) {
       $('.note.g').addClass("active")
       g.currentTime = 0;
       g.play();
       setTimeout(function() {
         $('.note.g').removeClass("active")
-      }, 200)
+      }, 300)
     } else if (event.which === 104) {
       $('.note.a').addClass("active")
       a.currentTime = 0;
       a.play();
       setTimeout(function() {
         $('.note.a').removeClass("active")
-      }, 200)
+      }, 300)
     } else if (event.which === 106) {
       $('.note.b').addClass("active")
       b.currentTime = 0;
       b.play();
       setTimeout(function() {
         $('.note.b').removeClass("active")
-      }, 200)
+      }, 300)
     }
   })
 });
+
+// The below is my code refactored, brought to you by jeremy
+// But it is only for mouseclicks, no keyboard functionality
+// in html, you can have a data-note="c", it's not user facing
+// that helps more for refactoring and will be used for keyboard
+// it's written into the html spec
+
+// $(document).ready(function() {
+//   $('note').mousedown(function(event) { // instead of this line, use the data from the html
+//     var note_id = $(this).data('note') + "Audio"
+//     var note_id = $(this).text() + "Audio"
+//     var note = $("#" + note_id)[0]
+//     note.load()
+//     note.play()
+//   })
+// })
+
+// More re
