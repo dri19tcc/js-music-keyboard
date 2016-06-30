@@ -46,7 +46,7 @@ $(document).ready( function() {
 
 // keynotes
   $(document).keypress(function(){ // instead of .cl.ick can also use .mousedown.  Use .mouseover for "strumming"
-      if (event.which === 97) {
+    if (event.which === 97) {
       c.currentTime = 0;
       c.play();
     } else if (event.which === 115) {
