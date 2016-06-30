@@ -1,45 +1,114 @@
 $(document).ready( function() {
-  var c = document.getElementById("cAudio");
-  var d = document.getElementById("dAudio");
-  var e = document.getElementById("eAudio");
-  var f = document.getElementById("fAudio");
-  var g = document.getElementById("gAudio");
-  var a = document.getElementById("aAudio");
-  var b = document.getElementById("bAudio");
+  var c = document.getElementById("cAudio")
+  var d = document.getElementById("dAudio")
+  var e = document.getElementById("eAudio")
+  var f = document.getElementById("fAudio")
+  var g = document.getElementById("gAudio")
+  var a = document.getElementById("aAudio")
+  var b = document.getElementById("bAudio")
+
+  var hover = false
+  $("#hover").on("click", function() {
+    hover = !hover
+    $(this).html(hover ? "Click Play" : "Hover Play")
+  })
 
   $('.note.c').click(function(){ // instead of .cl.ick can also use .mousedown.  Use .mouseover for "strumming"
-    c.currentTime = 0;
-    c.play();
+    if (!hover) {
+      c.currentTime = 0;
+      c.play();
+    }
+  })
+
+  $('.note.c').mouseover(function(){
+    if (hover) {
+      c.currentTime = 0;
+      c.play();
+    }
   })
 
   $('.note.d').click(function(){
-    d.currentTime = 0;
-    d.play();
+    if (!hover) {
+      d.currentTime = 0;
+      d.play();
+    }
+  })
+
+  $('.note.d').mouseover(function(){
+    if (hover) {
+      d.currentTime = 0;
+      d.play();
+    }
   })
 
   $('.note.e').click(function(){
-    e.currentTime = 0;
-    e.play();
+    if (!hover) {
+      e.currentTime = 0;
+      e.play();
+    }
+  })
+
+  $('.note.e').mouseover(function(){
+    if (hover) {
+      e.currentTime = 0;
+      e.play();
+    }
   })
 
   $('.note.f').click(function(){
-    f.currentTime = 0;
-    f.play();
+    if (!hover) {
+      f.currentTime = 0;
+      f.play();
+    }
+  })
+
+  $('.note.f').mouseover(function(){
+    if (hover) {
+      f.currentTime = 0;
+      f.play();
+    }
   })
 
   $('.note.g').click(function(){
-    g.currentTime = 0;
-    g.play();
+    if (!hover) {
+      g.currentTime = 0;
+      g.play();
+    }
+  })
+
+  $('.note.g').mouseover(function(){
+    if (hover) {
+      g.currentTime = 0;
+      g.play();
+    }
   })
 
   $('.note.a').click(function(){
-    a.currentTime = 0;
-    a.play();
+    if (!hover) {
+      a.currentTime = 0;
+      a.play();
+    }
+  })
+
+  $('.note.a').mouseover(function(){
+    if (hover) {
+      a.currentTime = 0;
+      a.play();
+    }
   })
 
   $('.note.b').click(function(){
-    b.currentTime = 0;
-    b.play();
+    if (!hover) {
+      b.currentTime = 0;
+      b.play();
+    }
+  })
+
+  $('.note.b').mouseover(function(){
+    if (hover) {
+      b.currentTime = 0;
+      b.play();
+    }
   })
 
 // keynotes
